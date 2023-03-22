@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Document object manipulation</h1>
+    <!-- Add and create the html element -->
+    <div style="border: 5px solid black; text-align: center;" id="main">
+        <h1 id="title">Add and create the html element</h1>
+        <input placeholder="Enter the text" style="margin-bottom: 20px;" type="text" id="field"><br>
+        <button style="margin-bottom: 20px;" onclick="addElement()"> add New Element</button>
+    </div>
+
+   <!-- Remove the html element  from dom -->
+   <h1>Hello</h1>
+    <script>
+        const addElement=()=>
+        {
+            //create Element
+            let element=document.createElement("div");
+
+            // set id atribute with value
+            element.setAttribute("id", "add");
+            console.log(element);
+
+            // get the value from input field and set in div tag
+           let text=document.createTextNode(document.getElementById("field").value);
+           let text1=document.createTextNode("Added a new Element")
+
+           element.append(text1);
+           element.append(text);
+           //get the 
+           let ele=document.getElementById("main");
+
+           element.style.color="red";
+           element.style.fontSize="50px";
+           //add the element last of the div tag
+
+
+           //ele.appendChild(element);
+
+           //add the element starting of div tag
+           let title=document.getElementById("title")
+           ele.insertBefore(element,title);
+
+           //change the html of element
+
+           title.innerHTML="Hi I am laxman";
+
+        }
+    </script>
+</body>
+
+</html>
