@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Iterate the object</h1>
+    <script>
+         const car={
+    color: "red",
+    name: "Maruti",
+    price :{
+        price1: 5000,
+        price2: 1000,
+        price2: 1500
+
+    },
+    owner:{
+    name1:"laxman",
+    name2: "Amol",
+    add :{
+     add1: "sangli",
+     add2: "pune"
+    }
+    
+    }
+    
+}
+console.log(car)
+for(let k in car)
+{
+    if(typeof car[k]=="object")
+    {
+        for(let ke in car[k])
+        {
+            if(typeof car[k][ke]=="object")
+            {
+                for(let kee in car[k][ke]){
+                    alert(car[k][ke][kee])
+                }
+            }
+            else
+            {
+                alert(car[k][ke])
+            }
+            
+        }
+    }else
+    {
+        alert(car[k])
+    }
+ 
+}
+    </script>
+</body>
+</html>
